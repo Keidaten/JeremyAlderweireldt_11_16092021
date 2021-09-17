@@ -1,14 +1,21 @@
 //React
 import React from 'react';
 
-//Datas
-
 //Components
-import LodgingsList from '../../components/LodgingsList';
+import Banner from '../../components/Banner';
+import LodgingsList from '../../components/Gallery';
+
+//Assets
+import bannerImg from '../../assets/homebanner.png';
 
 class Home extends React.Component {
 	render() {
-		return <LodgingsList />;
+		return (
+			<main>
+				<Banner bannerImgProps={bannerImg} altProps="Bannière photo : montagne enneigée" bannerTextProps="Chez vous, partout et ailleurs" />
+				<LodgingsList />
+			</main>
+		);
 	}
 }
 
