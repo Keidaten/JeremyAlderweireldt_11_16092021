@@ -1,24 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Pages
 import HomePage from './pages/HomePage';
 import LodgingPage from './pages/LodgingPage';
 import AboutPage from './pages/AboutPage';
+import ErrorPage from './pages/ErrorPage';
+
+// Components
+import Header from './components/Header';
+// import Card from './components/Card';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>
-			<Route exact path="/">
-				<HomePage />
-			</Route>
-			<Route path="/lodging">
-				<LodgingPage />
-			</Route>
-			<Route path="/about">
-				<AboutPage />
-			</Route>
+			<Header />
+			<Switch>
+				<Route exact path="/">
+					<HomePage />
+				</Route>
+				<Route path="/lodging">
+					<LodgingPage />
+				</Route>
+				<Route path="/about">
+					<AboutPage />
+				</Route>
+				<ErrorPage />
+			</Switch>
 		</Router>
 	</React.StrictMode>,
 	document.getElementById('root')
