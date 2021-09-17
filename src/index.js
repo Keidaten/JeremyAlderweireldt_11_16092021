@@ -10,7 +10,7 @@ import ErrorPage from './pages/ErrorPage';
 
 // Components
 import Header from './components/Header';
-// import Card from './components/Card';
+import Footer from './components/Footer';
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -28,6 +28,7 @@ ReactDOM.render(
 				</Route>
 				<ErrorPage />
 			</Switch>
+			<Footer />
 		</Router>
 	</React.StrictMode>,
 	document.getElementById('root')
