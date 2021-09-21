@@ -13,7 +13,7 @@ class LodgingsList extends React.Component {
 			<ul>
 				<li>
 					{lodgings.map((lodging) => (
-						<Card key={lodging.id} titleProps={lodging.title} coverProps={lodging.cover} />
+						<Card key={lodging.id} id={lodging.id} titleProps={lodging.title} coverProps={lodging.cover} />
 					))}
 				</li>
 			</ul>

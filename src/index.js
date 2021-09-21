@@ -20,9 +20,7 @@ ReactDOM.render(
 				<Route exact path="/">
 					<HomePage />
 				</Route>
-				<Route path="/lodging">
-					<LodgingPage />
-				</Route>
+				<Route path="/lodging/:id" render={(props) => <LodgingPage {...props} />}></Route>
 				<Route path="/about">
 					<AboutPage />
 				</Route>
