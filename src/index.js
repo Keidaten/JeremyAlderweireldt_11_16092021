@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -24,7 +24,10 @@ ReactDOM.render(
 				<Route path="/about">
 					<AboutPage />
 				</Route>
-				<ErrorPage />
+				<Route>
+					<Redirect to="/404" />
+					<ErrorPage />
+				</Route>
 			</Switch>
 			<Footer />
 		</Router>
