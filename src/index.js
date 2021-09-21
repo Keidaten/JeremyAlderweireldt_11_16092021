@@ -12,6 +12,9 @@ import ErrorPage from './pages/ErrorPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+//CSS
+import './styles/index.css';
+
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>

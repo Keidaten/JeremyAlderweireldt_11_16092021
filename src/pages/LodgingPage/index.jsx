@@ -9,6 +9,11 @@ import { lodgings } from '../../datas/lodgings';
 import Dropdown from '../../components/Dropdown';
 import Carousel from '../../components/Carousel';
 
+//Assets
+import emptyStar from '../../assets/emptyStar.svg';
+
+import '../../styles/index.css';
+
 class LodgingPage extends React.Component {
 	render() {
 		const { id } = this.props.match.params;
@@ -17,6 +22,10 @@ class LodgingPage extends React.Component {
 		if (!specificLodging) return <Redirect to="/404" />;
 
 		const { title, pictures, description, host, rating, location, equipments, tags } = specificLodging;
+
+		const ratingNumber = Number(rating);
+
+		const ratingMeasure = [1, 2, 3, 4, 5];
 
 		return (
 			<main>
@@ -33,6 +42,7 @@ class LodgingPage extends React.Component {
 				<div>
 					<div>{tags}</div>
 					<div>{rating}</div>
+					<div>{ratingMeasure.map((index) => (ratingNumber >= index ? <img key={index} className="--filled" src={emptyStar} alt="" /> : <img key={index} src={emptyStar} alt="" />))}</div>
 				</div>
 				<Dropdown title="Descritpion" content={description} />
 				<Dropdown title="Équipements" content={equipments} />

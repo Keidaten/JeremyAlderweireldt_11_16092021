@@ -38,7 +38,6 @@ class Carousel extends React.Component {
 						<img src={prevArrow} alt="" onClick={() => this.prevPicture()} />
 						<img src={pictures[this.state.picIndex]} alt={'Illustration de ' + title} />
 						<img src={nextArrow} alt="" onClick={() => this.nextPicture()} />
-						<p>{this.state.picIndex}</p>
 					</div>
 				)}
 			</div>
