@@ -6,22 +6,21 @@ import { lodgings } from '../../datas/lodgings';
 
 //Components
 import Dropdown from '../../components/Dropdown';
+import Carousel from '../../components/Carousel';
 
 class LodgingPage extends React.Component {
 	render() {
 		const { id } = this.props.match.params;
-		const specificLodging = lodgings.filter((lodging) => lodging.id === id)[0];
 
-		const { title, cover, description, host, rating, location, equipments, tags } = specificLodging;
+		const specificLodging = lodgings.filter((lodging) => lodging.id === id)[0];
+		const { title, pictures, description, host, rating, location, equipments, tags } = specificLodging;
 
 		return (
 			<main>
-				<img src={cover} alt={'Illustration de ' + title} />
+				<Carousel title={title} pictures={pictures} />
 				<div>
 					<div>
-						<h1>
-							{title} {id}
-						</h1>
+						<h1>{title}</h1>
 						<span>{location}</span>
 					</div>
 					<div>
