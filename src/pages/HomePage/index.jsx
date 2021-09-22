@@ -12,7 +12,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<main>
-				<Banner bannerImgProps={bannerImg} altProps="Bannière photo : montagne enneigée" bannerTextProps="Chez vous, partout et ailleurs" />
+				<Banner bannerImgProps={bannerImg} altProps="Bannière photo : montagne enneigée" bannerTextProps={'Chez vous, partout et ailleurs'} />
 				<LodgingsList />
 			</main>
 		);

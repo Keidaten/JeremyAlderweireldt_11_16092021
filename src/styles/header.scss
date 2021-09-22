@@ -2,6 +2,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 1rem;
+	@media screen and (min-width: 900px) {
+		margin-bottom: 4rem;
+	}
 	&__logo {
 		width: 9.063rem;
 		@media screen and (min-width: 650px) {
@@ -20,6 +24,9 @@
 	&__links {
 		&:not(:last-child) {
 			margin-right: 0.625rem;
+			@media screen and (min-width: 650px) {
+				margin-right: 3.75rem;
+			}
 		}
 	}
 }

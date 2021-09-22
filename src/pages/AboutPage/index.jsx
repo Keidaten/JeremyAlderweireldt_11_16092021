@@ -12,7 +12,7 @@ class AboutPage extends React.Component {
 	render() {
 		return (
 			<div>
-				<Banner bannerImgProps={bannerImg} altProps="Bannière photo : montagne enneigée" bannerTextProps="Chez vous, partout et ailleurs" />
+				<Banner bannerImgProps={bannerImg} altProps="Bannière photo : montagne enneigée" />
 				<Dropdown title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
 				<Dropdown title="Test" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
 				<Dropdown title="Respect" content="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question." />
