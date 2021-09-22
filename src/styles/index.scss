@@ -17,8 +17,8 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
+	text-decoration: none;
 }
 article,
 aside,
@@ -54,4 +54,27 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+* {
+	box-sizing: border-box;
+}
+
+//Global
+$primary-color: #ff6060;
+$primary-font: 'Monserat', sans-serif;
+
+* {
+	color: $primary-color;
+	font-family: $primary-font;
+}
+
+//375px
+body {
+	margin: 1.25rem;
+	@media screen and (min-width: 900px) {
+		margin: 1.5rem 3rem;
+	}
+	@media screen and (min-width: 1440px) {
+		margin: 3rem 6rem;
+	}
 }

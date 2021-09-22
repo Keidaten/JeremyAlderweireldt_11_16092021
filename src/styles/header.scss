@@ -1,0 +1,29 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__logo {
+		width: 9.063rem;
+		@media screen and (min-width: 650px) {
+			width: 13.145rem;
+		}
+	}
+	&__nav {
+		font-size: 0.75rem;
+		@media screen and (min-width: 650px) {
+			font-size: 1.6rem;
+		}
+		.--active {
+			text-decoration: underline;
+		}
+	}
+	&__links {
+		&:not(:last-child) {
+			margin-right: 0.625rem;
+		}
+	}
+}
+
+// .active {
+// 	text-decoration: underline;
+// }

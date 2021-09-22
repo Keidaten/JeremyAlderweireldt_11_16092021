@@ -13,7 +13,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 //CSS
-import './styles/index.css';
+import './styles/index.scss';
 
 ReactDOM.render(
 	<React.StrictMode>

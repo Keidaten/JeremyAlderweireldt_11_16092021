@@ -4,7 +4,8 @@ import React from 'react';
 //Assets
 import emptyStar from '../../assets/emptyStar.svg';
 
-import '../../styles/stars.css';
+//CSS
+import '../../styles/stars.scss';
 
 class Stars extends React.Component {
 	render() {
