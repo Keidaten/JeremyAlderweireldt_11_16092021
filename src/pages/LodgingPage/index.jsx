@@ -8,11 +8,7 @@ import { lodgings } from '../../datas/lodgings';
 //Components
 import Dropdown from '../../components/Dropdown';
 import Carousel from '../../components/Carousel';
-
-//Assets
-import emptyStar from '../../assets/emptyStar.svg';
-
-import '../../styles/index.css';
+import Stars from '../../components/Stars';
 
 class LodgingPage extends React.Component {
 	render() {
@@ -24,8 +20,6 @@ class LodgingPage extends React.Component {
 		const { title, pictures, description, host, rating, location, equipments, tags } = specificLodging;
 
 		const ratingNumber = Number(rating);
-
-		const ratingMeasure = [1, 2, 3, 4, 5];
 
 		return (
 			<main>
@@ -41,8 +35,7 @@ class LodgingPage extends React.Component {
 				</div>
 				<div>
 					<div>{tags}</div>
-					<div>{rating}</div>
-					<div>{ratingMeasure.map((index) => (ratingNumber >= index ? <img key={index} className="--filled" src={emptyStar} alt="" /> : <img key={index} src={emptyStar} alt="" />))}</div>
+					<Stars rating={ratingNumber} />
 				</div>
 				<Dropdown title="Descritpion" content={description} />
 				<Dropdown title="Équipements" content={equipments} />

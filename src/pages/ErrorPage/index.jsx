@@ -1,11 +1,16 @@
 //React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class ErrorPage extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Page 404</h1>
+				<span>Page 404</span>
+				<p>Oups, la page que vous demandez n'existe pas</p>
+				<Link to="/">
+					<p>Retourner sur la page d'accueil</p>
+				</Link>
 			</div>
 		);
 	}

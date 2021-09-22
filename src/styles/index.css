@@ -55,8 +55,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-/* Stars */
-.--filled {
-	filter: invert(55%) sepia(97%) saturate(3738%) hue-rotate(330deg) brightness(117%) contrast(102%);
-}
