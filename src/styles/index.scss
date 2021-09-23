@@ -16,7 +16,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	vertical-align: baseline;
 	text-decoration: none;
 }
@@ -68,13 +67,14 @@ $primary-font: 'Monserat', sans-serif;
 	font-family: $primary-font;
 }
 
-//375px
-body {
-	margin: 1.25rem;
+main {
+	max-width: 1440px;
+	margin: auto;
+	padding: 0 20px;
 	@media screen and (min-width: 900px) {
-		margin: 1.5rem 3rem;
+		padding: 0 30px;
 	}
-	@media screen and (min-width: 1440px) {
-		margin: 3rem 6rem;
+	@media screen and (min-width: 1200px) {
+		padding: 0 100px;
 	}
 }

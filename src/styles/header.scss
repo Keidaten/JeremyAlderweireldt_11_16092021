@@ -1,11 +1,16 @@
 .header {
+	max-width: 1440px;
+	margin: auto;
+	padding: 20px 20px 16px 20px;
+	@media screen and (min-width: 900px) {
+		padding: 30px 30px 39.5px 30px;
+	}
+	@media screen and (min-width: 1200px) {
+		padding: 40px 100px 63px 100px;
+	}
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 1rem;
-	@media screen and (min-width: 900px) {
-		margin-bottom: 4rem;
-	}
 	&__logo {
 		width: 9.063rem;
 		@media screen and (min-width: 650px) {
@@ -15,7 +20,7 @@
 	&__nav {
 		font-size: 0.75rem;
 		@media screen and (min-width: 650px) {
-			font-size: 1.6rem;
+			font-size: 1.5rem;
 		}
 		.--active {
 			text-decoration: underline;

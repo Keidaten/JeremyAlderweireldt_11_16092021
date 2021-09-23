@@ -8,10 +8,10 @@ class Banner extends React.Component {
 	render() {
 		// const titleProps = this.props.titleProps;
 		// const coverProps = this.props.coverProps;
-		const { bannerImgProps, bannerTextProps, altProps } = this.props;
+		const { bannerImgProps, bannerTextProps, altProps, pageProps } = this.props;
 
 		return (
-			<div className="banner">
+			<div className={'banner banner' + pageProps}>
 				<h2 className="banner__title">{bannerTextProps}</h2>
 				<img className="banner__img" src={bannerImgProps} alt={altProps} />
 				<div className="banner__shadow"></div>
