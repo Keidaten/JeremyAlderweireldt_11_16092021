@@ -1,3 +1,4 @@
+@import 'variables.scss';
 /* Reset CSS */
 /* prettier-ignore */
 html, body, div, span, applet, object, iframe,
@@ -59,8 +60,6 @@ table {
 }
 
 //Global
-$primary-color: #ff6060;
-$primary-font: 'Monserat', sans-serif;
 
 * {
 	color: $primary-color;

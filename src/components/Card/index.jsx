@@ -2,6 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//CSS
+import '../../styles/card.scss';
+
 class Card extends React.Component {
 	render() {
 		// const titleProps = this.props.titleProps;
@@ -9,12 +12,13 @@ class Card extends React.Component {
 		const { titleProps, coverProps, id } = this.props;
 
 		return (
-			<figure>
-				<Link to={`/lodging/${id}`}>
-					<img src={coverProps} alt={'Photo du logements' + titleProps} />
-					<figcaption>{titleProps}</figcaption>
-				</Link>
-			</figure>
+			<Link to={`/lodging/${id}`}>
+				<figure className="card">
+					<img className="card__img" src={coverProps} alt={'Photo du logements' + titleProps} />
+					<figcaption className="card__title">{titleProps}</figcaption>
+					<div className="card__shadow"></div>
+				</figure>
+			</Link>
 		);
 	}
 }

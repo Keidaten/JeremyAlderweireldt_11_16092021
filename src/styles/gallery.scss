@@ -1,0 +1,22 @@
+.gallery {
+	display: grid;
+	grid-auto-rows: 255px;
+	gap: 20px;
+	justify-content: center;
+	@media screen and (min-width: 730px) {
+		grid-template-columns: repeat(auto-fill, minmax(10px, 335px));
+	}
+	@media screen and (min-width: 900px) {
+		grid-template-columns: repeat(auto-fill, minmax(10px, 340px));
+		grid-auto-rows: 340px;
+		column-gap: 60px;
+		row-gap: 50px;
+		background-color: #f6f6f6;
+		border-radius: 25px;
+		padding: 53px 0 53px 0;
+	}
+	&__items {
+		border-radius: 10px;
+		overflow: hidden;
+	}
+}
