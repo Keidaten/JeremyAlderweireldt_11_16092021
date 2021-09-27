@@ -32,6 +32,9 @@
 			margin-bottom: 1.25rem;
 		}
 	}
+	&__tagsContainer {
+		display: flex;
+	}
 	&__tags {
 		font-size: 0.625rem;
 		background-color: $primary-color;
@@ -100,4 +103,7 @@
 			width: 4rem;
 		}
 	}
+}
+.starsContainer {
+	display: flex;
 }

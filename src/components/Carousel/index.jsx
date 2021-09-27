@@ -30,6 +30,9 @@ class Carousel extends React.Component {
 	}
 
 	render() {
+		const arrayLengh = this.props.pictures.length + 1;
+		const counter = this.state.picIndex + 1 + '/' + arrayLengh;
+
 		const { title, pictures } = this.props;
 
 		return (
@@ -41,6 +44,7 @@ class Carousel extends React.Component {
 						<img className="carousel__arrows carousel__arrows--prevArrow" src={prevArrow} alt="" onClick={() => this.prevPicture()} />
 						<img className="carousel__img" src={pictures[this.state.picIndex]} alt={'Illustration de ' + title} />
 						<img className="carousel__arrows carousel__arrows--nextArrow" src={nextArrow} alt="" onClick={() => this.nextPicture()} />
+						<div className="carousel__counter">{counter}</div>
 					</React.Fragment>
 				)}
 			</div>
