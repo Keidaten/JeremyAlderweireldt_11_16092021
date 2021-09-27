@@ -15,8 +15,8 @@ class Gallery extends React.Component {
 		return (
 			<ul className="gallery">
 				{lodgings.map((lodging) => (
-					<li className="gallery__items">
-						<Card key={lodging.id} id={lodging.id} titleProps={lodging.title} coverProps={lodging.cover} />
+					<li key={lodging.id} className="gallery__items">
+						<Card id={lodging.id} titleProps={lodging.title} coverProps={lodging.cover} />
 					</li>
 				))}
 			</ul>

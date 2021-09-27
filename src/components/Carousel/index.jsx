@@ -5,6 +5,9 @@ import React from 'react';
 import nextArrow from '../../assets/nextArrow.png';
 import prevArrow from '../../assets/prevArrow.png';
 
+//CSS
+import '../../styles/carousel.scss';
+
 class Carousel extends React.Component {
 	constructor(props) {
 		super(props);
@@ -30,15 +33,15 @@ class Carousel extends React.Component {
 		const { title, pictures } = this.props;
 
 		return (
-			<div>
+			<div className="carousel">
 				{pictures.length === 1 ? (
-					<img src={pictures[0]} alt={'Illustration de ' + title} />
+					<img className="carousel__img" src={pictures[0]} alt={'Illustration de ' + title} />
 				) : (
-					<div>
-						<img src={prevArrow} alt="" onClick={() => this.prevPicture()} />
-						<img src={pictures[this.state.picIndex]} alt={'Illustration de ' + title} />
-						<img src={nextArrow} alt="" onClick={() => this.nextPicture()} />
-					</div>
+					<React.Fragment>
+						<img className="carousel__arrows carousel__arrows--prevArrow" src={prevArrow} alt="" onClick={() => this.prevPicture()} />
+						<img className="carousel__img" src={pictures[this.state.picIndex]} alt={'Illustration de ' + title} />
+						<img className="carousel__arrows carousel__arrows--nextArrow" src={nextArrow} alt="" onClick={() => this.nextPicture()} />
+					</React.Fragment>
 				)}
 			</div>
 		);

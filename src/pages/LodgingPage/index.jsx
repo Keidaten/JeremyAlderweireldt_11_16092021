@@ -10,6 +10,9 @@ import Dropdown from '../../components/Dropdown';
 import Carousel from '../../components/Carousel';
 import Stars from '../../components/Stars';
 
+//CSS
+import '../../styles/footer.scss';
+
 class LodgingPage extends React.Component {
 	render() {
 		const { id } = this.props.match.params;
