@@ -11,7 +11,7 @@ import Carousel from '../../components/Carousel';
 import Stars from '../../components/Stars';
 
 //CSS
-import '../../styles/footer.scss';
+import '../../styles/lodgingPage.scss';
 
 class LodgingPage extends React.Component {
 	render() {
@@ -21,24 +21,34 @@ class LodgingPage extends React.Component {
 		if (!specificLodging) return <Redirect to="/404" />;
 
 		const { title, pictures, description, host, rating, location, equipments, tags } = specificLodging;
-
+		const { name, picture } = host;
 		const ratingNumber = Number(rating);
+
+		const splittedName = name.split(' ');
+		const brokenName = splittedName.map((name, index) => <span key={index + '-' + index}>{name}</span>);
 
 		return (
 			<main>
 				<Carousel title={title} pictures={pictures} />
-				<div>
-					<div>
-						<h1>{title}</h1>
-						<span>{location}</span>
+				<div className="lodgingInfos">
+					<div className="lodgingInfos__heading">
+						<h1 className="lodgingInfos__title">{title}</h1>
+						<span className="lodgingInfos__location">{location}</span>
+						<div className="lodgingInfos__tagsContainer">
+							{tags.map((tag, index) => (
+								<div key={tag + '-' + index} className="lodgingInfos__tags">
+									{tag}
+								</div>
+							))}
+						</div>
 					</div>
-					<div>
-						{host.name} <img src={host.picture} alt={'Photo de ' + host.name} />{' '}
+					<div className="lodgingInfos__subHeading">
+						<Stars rating={ratingNumber} />
+						<div className="lodgingInfos__ownerContainer">
+							<span className="lodgingInfos__ownerName">{brokenName}</span>
+							<img className="lodgingInfos__picture" src={picture} alt={'Photo de ' + host.name} />
+						</div>
 					</div>
-				</div>
-				<div>
-					<div>{tags}</div>
-					<Stars rating={ratingNumber} />
 				</div>
 				<Dropdown title="Descritpion" content={description} />
 				<Dropdown title="Équipements" content={equipments} />

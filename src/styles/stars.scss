@@ -1,3 +1,7 @@
-.--filled {
-	filter: invert(55%) sepia(97%) saturate(3738%) hue-rotate(330deg) brightness(117%) contrast(102%);
+.stars {
+	height: 15px;
+	width: 15px;
+	&--filled {
+		filter: invert(55%) sepia(97%) saturate(3738%) hue-rotate(330deg) brightness(117%) contrast(102%);
+	}
 }
