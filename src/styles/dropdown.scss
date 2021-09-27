@@ -1,0 +1,56 @@
+@import 'variables.scss';
+
+.dropdown {
+	&:not(:first-child) {
+		margin-top: 20px;
+	}
+	&__button {
+		border-radius: 5px;
+		overflow: hidden;
+		background-color: $primary-color;
+		display: flex;
+		justify-content: space-between;
+		height: 30px;
+		align-items: center;
+		padding: 0 11.5104px 0 6.7904px;
+		@media screen and (min-width: 700px) {
+			height: 38.5px;
+			padding: 0 15.75px 0 9.295px;
+		}
+		@media screen and (min-width: 1224px) {
+			height: 47px;
+			padding: 0 20px 0 11.8px;
+		}
+	}
+	&__title {
+		color: white;
+		font-size: 13px;
+		@media screen and (min-width: 700px) {
+			font-size: 18.5px;
+		}
+		@media screen and (min-width: 1224px) {
+			font-size: 24px;
+		}
+	}
+	&__arrow {
+		width: 15.2px;
+		object-fit: contain;
+		@media screen and (min-width: 700px) {
+			width: 19.53px;
+		}
+		@media screen and (min-width: 1224px) {
+			width: 23.86px;
+		}
+	}
+	&__content {
+		padding: 1.6875rem 1rem 1.1875rem 1rem;
+		font-size: 0.75rem;
+		background-color: #f6f6f6;
+		@media screen and (min-width: 700px) {
+			font-size: 1.125rem;
+		}
+		@media screen and (min-width: 1224px) {
+			font-size: 1.5rem;
+		}
+	}
+}

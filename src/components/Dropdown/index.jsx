@@ -5,6 +5,9 @@ import React from 'react';
 import upArrow from '../../assets/upArrow.png';
 import downArrow from '../../assets/downArrow.png';
 
+//CSS
+import '../../styles/dropdown.scss';
+
 class Dropdown extends React.Component {
 	constructor(props) {
 		super(props);
@@ -21,12 +24,12 @@ class Dropdown extends React.Component {
 		const { title, content } = this.props;
 
 		return (
-			<div>
-				<div onClick={() => this.updateDropDownState()}>
-					{title}
-					{this.state.isClose ? <img src={downArrow} alt="Flèche vers le bas" /> : <img src={upArrow} alt="Flèche vers le haut" />}
+			<div className="dropdown">
+				<div className="dropdown__button" onClick={() => this.updateDropDownState()}>
+					<div className="dropdown__title">{title}</div>
+					{this.state.isClose ? <img className="dropdown__arrow" src={downArrow} alt="Flèche vers le bas" /> : <img className="dropdown__arrow" src={upArrow} alt="Flèche vers le haut" />}
 				</div>
-				{this.state.isClose ? null : <div>{content}</div>}
+				{this.state.isClose ? null : <div className="dropdown__content">{content}</div>}
 			</div>
 		);
 	}
