@@ -71,10 +71,10 @@ main {
 	max-width: 1440px;
 	margin: auto;
 	padding: 0 20px;
-	@media screen and (min-width: 900px) {
+	@media screen and (min-width: 1224px) {
 		padding: 0 30px;
 	}
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: 1224px) {
 		padding: 0 100px;
 	}
 }

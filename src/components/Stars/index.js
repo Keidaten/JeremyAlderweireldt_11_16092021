@@ -15,7 +15,7 @@ class Stars extends React.Component {
 
 		const ratingMeasure = [1, 2, 3, 4, 5];
 
-		return <div className="starsContainer">{ratingMeasure.map((index) => (rating >= index ? <img key={index} className="stars stars--filled" src={emptyStar} alt="" /> : <img key={index} src={emptyStar} alt="" />))}</div>;
+		return <div className="starsContainer">{ratingMeasure.map((index) => (rating >= index ? <img key={index} className="stars stars--filled" src={emptyStar} alt="" /> : <img className="stars" key={index} src={emptyStar} alt="" />))}</div>;
 	}
 }
 

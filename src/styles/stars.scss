@@ -1,6 +1,12 @@
 .stars {
-	height: 15px;
 	width: 15px;
+	display: flex;
+	@media screen and (min-width: 700px) {
+		width: 22.5px;
+	}
+	@media screen and (min-width: 1224px) {
+		width: 30px;
+	}
 	&--filled {
 		filter: invert(55%) sepia(97%) saturate(3738%) hue-rotate(330deg) brightness(117%) contrast(102%);
 	}

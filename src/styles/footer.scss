@@ -6,19 +6,19 @@
 	align-items: center;
 	padding: 65px;
 	margin-top: 22px;
-	@media screen and (min-width: 900px) {
+	@media screen and (min-width: 1224px) {
 		margin-top: 43px;
 	}
 	&__logo {
 		margin-bottom: 30px;
-		@media screen and (min-width: 650px) {
+		@media screen and (min-width: 700px) {
 			margin-bottom: 48px;
 		}
 	}
 	&__text {
 		color: white;
 		font-size: 0.75rem;
-		@media screen and (min-width: 650px) {
+		@media screen and (min-width: 700px) {
 			font-size: 1.5rem;
 		}
 	}
