@@ -21,15 +21,15 @@ class Dropdown extends React.Component {
 	}
 
 	render() {
-		const { title, content } = this.props;
+		const { title, content, page } = this.props;
 
 		return (
-			<div className="dropdown">
+			<div className={'dropdown dropdown--' + page}>
 				<div className="dropdown__button" onClick={() => this.updateDropDownState()}>
-					<div className="dropdown__title">{title}</div>
+					<div className={'dropdown__title dropdown__title--' + page}>{title}</div>
 					{this.state.isClose ? <img className="dropdown__arrow" src={downArrow} alt="Flèche vers le bas" /> : <img className="dropdown__arrow" src={upArrow} alt="Flèche vers le haut" />}
 				</div>
-				{this.state.isClose ? null : <div className="dropdown__content">{content}</div>}
+				{this.state.isClose ? null : <div className={'dropdown__content dropdown__content--' + page}>{content}</div>}
 			</div>
 		);
 	}

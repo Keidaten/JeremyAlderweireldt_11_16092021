@@ -23,14 +23,14 @@ class Carousel extends React.Component {
 	}
 
 	prevPicture() {
-		let arrayPicsLength = this.props.pictures.length - 1;
+		let arrayPicsLength = this.props.pictures.length;
 		this.setState((state) => ({
 			picIndex: state.picIndex === 0 ? (state.picIndex = arrayPicsLength - 1) : state.picIndex - 1,
 		}));
 	}
 
 	render() {
-		const arrayLengh = this.props.pictures.length + 1;
+		const arrayLengh = this.props.pictures.length;
 		const counter = this.state.picIndex + 1 + '/' + arrayLengh;
 
 		const { title, pictures } = this.props;

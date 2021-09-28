@@ -25,7 +25,16 @@ class LodgingPage extends React.Component {
 		const ratingNumber = Number(rating);
 
 		const splittedName = name.split(' ');
+		console.log(splittedName);
 		const brokenName = splittedName.map((name, index) => <span key={index + '-' + index}>{name}</span>);
+
+		const brokenEquipments = (
+			<ul>
+				{equipments.map((name, index) => (
+					<li key={index + '-' + index}>{name}</li>
+				))}
+			</ul>
+		);
 
 		return (
 			<main>
@@ -50,8 +59,10 @@ class LodgingPage extends React.Component {
 						</div>
 					</div>
 				</div>
-				<Dropdown title="Descritpion" content={description} />
-				<Dropdown title="Équipements" content={equipments} />
+				<div className="dropdownContainer dropdownContainer--lodgingPage">
+					<Dropdown page="lodgingPage" title="Descritpion" content={description} />
+					<Dropdown page="lodgingPage" title="Équipements" content={brokenEquipments} />
+				</div>
 			</main>
 		);
 	}

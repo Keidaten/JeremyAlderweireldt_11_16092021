@@ -1,10 +1,44 @@
 @import 'variables.scss';
 
+//Container
+.dropdownContainer {
+	&--lodgingPage {
+		margin-top: 1rem;
+		@media screen and (min-width: 700px) {
+			margin-top: 1.25rem;
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+		}
+		@media screen and (min-width: 1224px) {
+			margin-top: 1.5rem;
+		}
+	}
+}
+//end Container
+
 .dropdown {
 	&:not(:first-child) {
 		margin-top: 20px;
+		@media screen and (min-width: 700px) {
+			margin-top: 25.5px;
+		}
+		@media screen and (min-width: 1224px) {
+			margin-top: 31px;
+		}
+	}
+	@media screen and (min-width: 700px) {
+		margin: 0 109px 0 108px;
+	}
+	@media screen and (min-width: 1224px) {
+		margin: 0 109px 0 108px;
+	}
+	&--lodgingPage {
+		margin: 0;
+		flex-basis: 47%;
 	}
 	&__button {
+		cursor: pointer;
 		border-radius: 5px;
 		overflow: hidden;
 		background-color: $primary-color;
@@ -27,9 +61,15 @@
 		font-size: 13px;
 		@media screen and (min-width: 700px) {
 			font-size: 18.5px;
+			&--lodgingPage {
+				font-size: 15.5px;
+			}
 		}
 		@media screen and (min-width: 1224px) {
 			font-size: 24px;
+			&--lodgingPage {
+				font-size: 18px;
+			}
 		}
 	}
 	&__arrow {
@@ -44,13 +84,19 @@
 	}
 	&__content {
 		padding: 1.6875rem 1rem 1.1875rem 1rem;
-		font-size: 0.75rem;
+		font-size: 12px;
 		background-color: #f6f6f6;
 		@media screen and (min-width: 700px) {
 			font-size: 1.125rem;
+			&--lodgingPage {
+				font-size: 15px;
+			}
 		}
 		@media screen and (min-width: 1224px) {
 			font-size: 1.5rem;
+			&--lodgingPage {
+				font-size: 1.125rem;
+			}
 		}
 	}
 }
