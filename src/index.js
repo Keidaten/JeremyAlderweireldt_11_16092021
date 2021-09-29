@@ -19,10 +19,12 @@ ReactDOM.render(
 	<React.StrictMode>
 		<Router>
 			<Header />
+			{/* get only the first route who match url  */}
 			<Switch>
 				<Route exact path="/">
 					<HomePage />
 				</Route>
+				{/* give access to match object by props */}
 				<Route path="/lodging/:id" render={(props) => <LodgingPage {...props} />}></Route>
 				<Route path="/about">
 					<AboutPage />

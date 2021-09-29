@@ -15,8 +15,11 @@ import '../../styles/lodgingPage.scss';
 
 class LodgingPage extends React.Component {
 	render() {
+		//useParams alternative for class components
+		//get URL param
 		const { id } = this.props.match.params;
 
+		//get datas for matching loding ID
 		const specificLodging = lodgings.filter((lodging) => lodging.id === id)[0];
 		if (!specificLodging) return <Redirect to="/404" />;
 
@@ -25,7 +28,6 @@ class LodgingPage extends React.Component {
 		const ratingNumber = Number(rating);
 
 		const splittedName = name.split(' ');
-		console.log(splittedName);
 		const brokenName = splittedName.map((name, index) => <span key={index + '-' + index}>{name}</span>);
 
 		const brokenEquipments = (

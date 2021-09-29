@@ -17,9 +17,10 @@ class Carousel extends React.Component {
 	nextPicture() {
 		let arrayPicsLength = this.props.pictures.length - 1;
 		this.setState((state) => ({
+			//if picIndex = arrayLength, picIndex = 0
+			//else : picIndex = picIndex +1
 			picIndex: state.picIndex === arrayPicsLength ? 0 : state.picIndex + 1,
 		}));
-		console.log(arrayPicsLength);
 	}
 
 	prevPicture() {
