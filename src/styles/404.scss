@@ -1,0 +1,38 @@
+.errorPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	&__title {
+		font-size: 6rem;
+		font-weight: bold;
+		@media screen and (min-width: 700px) {
+			font-size: 12rem;
+		}
+		@media screen and (min-width: 1224px) {
+			font-size: 18rem;
+		}
+	}
+	&__content {
+		font-size: 1.125rem;
+		margin-bottom: 133px;
+		@media screen and (min-width: 700px) {
+			font-size: 1.6875rem;
+			margin-bottom: 157.5px;
+		}
+		@media screen and (min-width: 1224px) {
+			font-size: 2.25rem;
+			margin-bottom: 182px;
+		}
+	}
+	&__link {
+		text-decoration: underline;
+		font-size: 0.875rem;
+		@media screen and (min-width: 700px) {
+			font-size: 1rem;
+		}
+		@media screen and (min-width: 1224px) {
+			font-size: 1.125rem;
+		}
+	}
+}
